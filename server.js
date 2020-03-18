@@ -49,6 +49,7 @@ require('./lib/server/bootevent')(env, language).boot(function booted (ctx) {
     var app = require('./app')(env, ctx);
     var server = create(app).listen(PORT, HOSTNAME);
     console.log(translate('Listening on port'), PORT, HOSTNAME);
+    console.log('Daves version');
 
     if (ctx.bootErrors && ctx.bootErrors.length > 0) {
       return;
